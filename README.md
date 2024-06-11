@@ -1,2 +1,2 @@
-# Testowe-repo
+# TestowyProjekt
 Mój pierwszy projekt Git
