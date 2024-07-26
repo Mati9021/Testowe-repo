@@ -32,7 +32,7 @@ public class AddAddressSteps {
     @Given("the user is logged in")
     public void theUserIsLoggedIn() {
         driver.get("https://mystore-testlab.coderslab.pl");
-        driver.findElement(By.linkText("Sign in")).click();
+        driver.findElement(By.className("Sign in")).click();
         driver.findElement(By.name("email")).sendKeys("wzkkgazkhcoakoevnt@hthlm.com");
         driver.findElement(By.name("password")).sendKeys("SweetChilli");
         driver.findElement(By.id("submit-login")).click();
@@ -49,9 +49,9 @@ public class AddAddressSteps {
         driver.findElement(By.cssSelector(".addresses-footer .btn")).click();
     }
 
-    @And("the user fills the address form with {alias}, {address}, {city}, {postal code}, {country}, {phone}")
+    @And("the user fills the address form with alias, address, city, postal code, country, phone")
     public void theUserFillsTheAddressFormWith(String alias, String address, String city, String zip, String country, String phone) {
-        driver.findElement(By.name("alias")).sendKeys(alias);
+        driver.findElement(By.id("alias")).sendKeys(alias);
         driver.findElement(By.name("address1")).sendKeys(address);
         driver.findElement(By.name("city")).sendKeys(city);
         driver.findElement(By.name("postal code")).sendKeys(zip);
@@ -61,7 +61,7 @@ public class AddAddressSteps {
         
     }
 
-    @Then("the new address is added with {alias}, {address}, {city}, {postal code}, {country}, {phone}")
+    @Then("the new address is added with alias, address, city, postal code, country, phone")
     public void theNewAddressIsAddedWith(String alias, String address, String city, String zip, String country, String phone) {
         String actualAlias = driver.findElement(By.cssSelector(".address .alias")).getText();
         String actualAddress = driver.findElement(By.cssSelector(".address .address1")).getText();

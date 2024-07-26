@@ -12,6 +12,6 @@ Feature: Add new address
     Then the new address is added with "<alias>", "<address>", "<city>", "<zip>", "<country>", "<phone>"
 
     Examples:
-      | alias | address          | city     | zip   | country   | phone      |
+      | alias | address          | city    | zip   | country        | phone      |
       | Home  | 123 Main St      | Bristol | 10001 | United Kingdom | 1234567890 |
-      | Work  | 456 Corporate Dr | Bristol   | 94111 | United Kingdom | 0987654321 |
+      | Work  | 456 Corporate Dr | Bristol | 94111 | United Kingdom | 0987654321 |
